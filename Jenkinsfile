@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('build'){
       steps{
-          sh 'cd /home/slave2/workspace/Testpipeline/java-hello-world-with-maven'
+          sh 'cd /home/slave2/workspace/Testpipeline'
           sh 'docker build -t "maven" .'
         }
     }
