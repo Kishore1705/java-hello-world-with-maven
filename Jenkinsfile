@@ -1,11 +1,8 @@
 pipeline{
   agent any
   stages{
-    stage('build'){
-      steps{
-          sh 'cd /home/slave2/workspace/Testpipeline'
-          sh 'docker build -t "maven" .'
-        }
+    stage('push'){
+      sh 'docker tag maven:latest 369191473161.dkr.ecr.ap-south-1.amazonaws.com/masterrepo:latest'
     }
-}
+  }
 }
